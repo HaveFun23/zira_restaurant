@@ -12,98 +12,110 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- end css styles -->
   </head>
-  <body>
-    <header>
-      <div class="header_inner">
-        <div class="logo"><img src="./img/icons/logo.svg" alt="" /></div>
-        <div class="main_header_part">
-          <div class="row">
-            <div class="socials">
-              <a href="#"><img src="./img/icons/Instagram.svg" alt="" /></a>
-              <a href="#"><img src="./img/icons/VK.svg" alt="" /></a>
-              <a href="#"><img src="./img/icons/Twitter.svg" alt="" /></a>
-              <a href="#"><img src="./img/icons/VK.svg" alt="" /></a>
+  <body onload="setInterval(AutoMove,100)">
+    <div class="main">
+      <header>
+        <div class="header_inner">
+          <div class="logo"><img src="./img/icons/logo.svg" alt="" /></div>
+          <div class="main_header_part">
+            <div class="row">
+              <div class="socials">
+                <a href="#"><img src="./img/icons/Instagram.svg" alt="" /></a>
+                <a href="#"><img src="./img/icons/VK.svg" alt="" /></a>
+                <a href="#"><img src="./img/icons/Twitter.svg" alt="" /></a>
+                <a href="#"><img src="./img/icons/VK.svg" alt="" /></a>
+              </div>
+              <nav>
+                <a href="#">Главная</a>
+                <a href="#">Меню</a>
+                <a href="#">О Нас</a>
+                <a href="">Галерея</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Блог</a>
+                <a href="#">Бронирование</a>
+              </nav>
+              <div class="enter">
+                <p>Вход</p>
+                <p>/</p>
+                <p>Регистрация</p>
+              </div>
             </div>
-            <nav>
-              <a href="#">Главная</a>
-              <a href="#">Меню</a>
-              <a href="#">О Нас</a><a href="">Галерея</a>
-              <a href="#">Вакансии</a>
-              <a href="#">Блог</a>
-              <a href="#">Бронирование</a>
-            </nav>
-            <div class="enter">
-              <p>Вход</p>
-              <p>/</p>
-              <p>Регистрация</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="search">
-              <input type="text" />
-              <div><img src="./img/icons/ico_search.svg" alt="" /></div>
-            </div>
-            <div class="basket">
-              <p>Корзина</p>
-              <div><img src="./img/icons/ico_basket.svg" alt="" /></div>
-              <p>00</p>
-            </div>
-            <div>
-              <button class="sales">
-                <div><img src="./img/icons/ico_fire.png" alt="" /></div>
-                <p>Акции</p>
-              </button>
+            <div class="row">
+              <div class="search">
+                <input type="text" />
+                <div><img src="./img/icons/ico_search.svg" alt="" /></div>
+              </div>
+              <div class="basket">
+                <p>Корзина</p>
+                <div><img src="./img/icons/ico_basket.svg" alt="" /></div>
+                <p>00</p>
+              </div>
+              <div>
+                <button class="sales">
+                  <div><img src="./img/icons/ico_fire.png" alt="" /></div>
+                  <p>Акции</p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- <input type="range" min="20" max="60" value="0" id="range" /> -->
-    <section class="main_page">
-      <div class="info">
-        <h1>Эксклюзивное меню на ваш вкус</h1>
-        <p class="show_all">Смотреть все меню</p>
-        <button class="sales big_button">
-          <div><img src="./img/icons/ico_fire.png" alt="" /></div>
-          <p>Акции на сегодня</p>
-        </button>
-      </div>
-      <div class="slider">
-        <div class="slider_inner_container">
-          <div class="shadows_in_slider"></div>
-          <div class="cards_in_slider" id="cards_in_slider">
-            <div class="slider_card">
-              <p>Название мероприятия</p>
-              <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
-            </div>
-            <div class="slider_card">
-              <p>Название мероприятия</p>
-              <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
-            </div>
-            <div class="slider_card">
-              <p>Название мероприятия</p>
-              <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
-            </div>
-            <div class="slider_card">
-              <p>Название мероприятия</p>
-              <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
-            </div>
-            <div class="slider_card">
-              <p>Название мероприятия</p>
-              <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
-            </div>
-          </div>
-          <div class="shadows_in_slider2"></div>
+      </header>
+      <!-- <input type="range" min="20" max="60" value="0" id="range" /> -->
+      <section class="main_page">
+        <div class="info">
+          <h1>Эксклюзивное меню на ваш вкус</h1>
+          <p class="show_all">Смотреть все меню</p>
+          <button class="sales big_button">
+            <div><img src="./img/icons/ico_fire.png" alt="" /></div>
+            <p>Акции на сегодня</p>
+          </button>
         </div>
-        <div class="container_for_range">
-          <div class="range" id="slider">
-            <p onmousedown="changePosRound()" class="round" id="round"></p>
+        <div class="slider">
+          <div class="slider_inner_container">
+            <div class="shadows_in_slider"></div>
+            <div class="cards_in_slider" id="cards_in_slider">
+              <div class="slider_card">
+                <p>Название мероприятия</p>
+                <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
+              </div>
+              <div class="slider_card">
+                <p>Название мероприятия</p>
+                <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
+              </div>
+              <div class="slider_card">
+                <p>Название мероприятия</p>
+                <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
+              </div>
+              <div class="slider_card">
+                <p>Название мероприятия</p>
+                <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
+              </div>
+              <div class="slider_card">
+                <p>Название мероприятия</p>
+                <div><img src="./img/slider/Rectangle 1.png" alt="" /></div>
+              </div>
+            </div>
+            <div class="shadows_in_slider2"></div>
           </div>
-          <p class="show_all in_range">Смотреть все</p>
+          <div class="container_for_range">
+            <div class="range" id="slider">
+              <p onmousedown="changePosRound()" class="round" id="round"></p>
+            </div>
+            <p class="show_all in_range">Смотреть все</p>
+          </div>
         </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer_inner">
+        <a>instagram</a>
+        <a>facebook</a>
+        <a>x</a>
+        <a>headhunter</a>
+        <a>youtube</a>
+        <a>связаться с нами</a>
       </div>
-    </section>
-    <p id="don"></p>
+    </footer>
     <script src="./js/main.js"></script>
   </body>
 </html>
