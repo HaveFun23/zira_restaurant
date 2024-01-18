@@ -1,5 +1,12 @@
 @import "../fonts/stylesheet.css";
 
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f9f9fd;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #16181b;
+}
 body {
   font-family: "SF Pro Display";
   background-color: #16181b;
@@ -317,13 +324,49 @@ footer {
   }
 }
 .sort {
+  cursor: pointer;
   summary {
     display: flex;
     align-items: center;
     column-gap: 16px;
     list-style: none;
+
     p {
+      transition: color 0.5s linear;
       color: #7a7f84;
+    }
+    svg {
+      transition: fill 0.5s linear;
+      fill: #7a7f84;
+    }
+  }
+  summary:hover {
+    p {
+      color: #ff9100;
+    }
+    svg {
+      fill: #ff9100;
+    }
+  }
+}
+.sort[open] {
+  p {
+    color: #ff9100;
+  }
+  svg {
+    fill: #ff9100;
+    transform: rotate(90deg);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+    li {
+      transition: color 0.5s linear;
+    }
+    li:hover {
+      color: #ff9100;
     }
   }
 }
@@ -351,16 +394,34 @@ footer {
   details {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
     margin-top: 20px;
+    svg {
+      rotate: -90deg;
+    }
   }
   details[open] {
-    p {
-      padding-left: 10px;
+    summary {
+      color: #ff9100;
+    }
+    svg {
+      fill: #ff9100;
+      rotate: 0deg;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
       margin-top: 20px;
-      font-size: 16px;
-      font-weight: 400;
-      color: #7a7f84;
+      row-gap: 20px;
+      padding-left: 10px;
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        color: #7a7f84;
+        transition: color 0.5s linear;
+      }
+      li:hover {
+        color: #ff9100;
+      }
     }
   }
   summary {
@@ -368,13 +429,15 @@ footer {
     align-items: center;
     column-gap: 50px;
   }
+  summary:hover {
+    color: #ff9100;
+  }
   transition: all 0.2s linear;
   svg {
     fill: #7a7f84;
   }
 }
 .ones_of_category:hover {
-  color: #ff9100;
   cursor: pointer;
   svg {
     fill: #ff9100;
@@ -382,10 +445,9 @@ footer {
 }
 .name_of_product {
   padding: 20px 30px;
-  width: 286px;
   background-color: #1f2125;
   border-radius: 10px;
-
+  min-width: 286px;
   p {
     font-size: 24px;
     font-weight: bold;
@@ -397,8 +459,8 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  row-gap: 16px;
-  column-gap: 16px;
+  row-gap: 10px;
+  column-gap: 10px;
 }
 
 .card_ones {
@@ -467,7 +529,7 @@ footer {
 .square {
   flex-direction: column;
   align-items: flex-end;
-  max-width: 362px;
+  max-width: 361px;
   background-color: white;
   flex-basis: 362px;
   .main_image {
@@ -512,3 +574,69 @@ footer {
 /* end products */
 
 /* end product page */
+
+/* start product sample page */
+.gray_bar {
+  width: 100%;
+  height: 40px;
+  background-color: #1f2125;
+  margin-top: 35px;
+}
+
+.images_in_product_descr {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 451px;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.product_descr {
+  display: flex;
+  color: #51545a;
+}
+.product_descr_inner {
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  h2 {
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+.rate {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+}
+
+.main_text_in_descr {
+  color: #7a7f84;
+}
+
+.product_price {
+  color: #ff9100;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.article_and_button {
+  display: flex;
+  button {
+    display: flex;
+    align-items: center;
+    background-color: #ff9100;
+    column-gap: 10px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 10px;
+  }
+}
+/* end product sample page */

@@ -126,28 +126,52 @@
               <p>Сорт:</p>
               <details class="sort">
                 <summary>
-                  <p>По умолчанию</p>
+                  <p id="summary_inner_text2">По умолчанию</p>
                   <div>
-                    <img src="./img/icons/Vector.svg" type="" />
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0L3.97 6L0 0H8Z" />
+                    </svg>
                   </div>
                 </summary>
+                <ul>
+                  <li onclick="changeInnerText2(this)">Белое</li>
+                </ul>
               </details>
             </div>
             <div>
               <p>Сортировка:</p>
               <details class="sort">
                 <summary>
-                  <p>По умолчанию</p>
+                  <p id="summary_inner_text">По умолчанию</p>
                   <div>
-                    <img src="./img/icons/Vector.svg" type="" />
+                    <svg
+                      width="8"
+                      height="6"
+                      viewBox="0 0 8 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M8 0L3.97 6L0 0H8Z" />
+                    </svg>
                   </div>
                 </summary>
+                <ul>
+                  <li onclick="changeInnerText(this)">По возрастанию</li>
+                  <li onclick="changeInnerText(this)">По убыванию</li>
+                </ul>
               </details>
             </div>
           </div>
           <div class="type_of_offset">
             <div onclick="changeOffset('square')">
               <svg
+                id="firstT"
                 width="24"
                 height="20"
                 viewBox="0 0 24 20"
@@ -161,6 +185,7 @@
             </div>
             <div onclick="changeOffset('line')">
               <svg
+                id="secondT"
                 width="24"
                 height="20"
                 viewBox="0 0 24 20"
@@ -193,8 +218,10 @@
                     </svg>
                   </div>
                 </summary>
-                <p>don</p>
-                <p>nedon</p>
+                <ul>
+                  <li>don</li>
+                  <li>nedon</li>
+                </ul>
               </details>
             </div>
           </div>

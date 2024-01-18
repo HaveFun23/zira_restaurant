@@ -5,6 +5,9 @@ const container_for_product_cards = document.getElementById(
 );
 var id_for_cards = 0;
 const don = document.getElementById("don");
+const firstT = document.getElementById("firstT");
+const secondT = document.getElementById("secondT");
+secondT.style.fill = "#ff9100";
 /* function openInclude(e) {
   if (e.className !== "open") {
     e.className = "card open";
@@ -21,7 +24,7 @@ function hideAnotherCards() {
     }
   }
 } */
-function changeOffset(type) {
+function changeOffset(type, elem) {
   if (type == "square") {
     for (let s = 0; s < array_of_products.length; s++) {
       array_of_products[s].className = "card_ones square";
@@ -29,6 +32,8 @@ function changeOffset(type) {
     }
     container_for_product.style.justifyContent = "unset";
     container_for_product_cards.style.flexDirection = "row";
+    firstT.style.fill = "#ff9100";
+    secondT.style.fill = "#707070";
   }
   if (type == "line") {
     for (let s = 0; s < array_of_products.length; s++) {
@@ -38,13 +43,19 @@ function changeOffset(type) {
     }
     container_for_product.style.justifyContent = "space-between";
     container_for_product_cards.style.flexDirection = "column";
+    firstT.style.fill = "#707070";
+    secondT.style.fill = "#ff9100";
   }
-  console.log(type);
 }
-/* for (let index = 0; index < array_of_products.length; index++) {
-    for (var s in array_of_products[index]) {
-      if (s == "id") {
-        array_of_products_id[index] =array_of_products[index].id;
-      }
-    }
-} */
+
+const summary_inner_text = document.getElementById("summary_inner_text");
+
+function changeInnerText(e) {
+  summary_inner_text.innerText = e.innerText;
+}
+
+const summary_inner_text2 = document.getElementById("summary_inner_text2");
+
+function changeInnerText2(e) {
+  summary_inner_text2.innerText = e.innerText;
+}
