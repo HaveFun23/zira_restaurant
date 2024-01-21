@@ -13,7 +13,7 @@
     <!-- end css styles -->
   </head>
   <body>
-    <div class="main">
+    <div class="main" style="margin-bottom: unset">
       <header>
         <div class="header_inner">
           <div class="logo"><img src="./img/icons/logo.svg" alt="" /></div>
@@ -118,167 +118,103 @@
         <div class="info_of_category container">
           <a href="#">Главная</a>
           <p>/</p>
-          <a href="#">Наше меню</a>
+          <a href="#">Корзина</a>
         </div>
-        <div class="gray_bar"></div>
-        <section class="container products">
-          <div class="name_of_product">
-            <p>Наше меню</p>
-            <div class="ones_of_category">
-              <details>
-                <summary>
-                  <h2>Алкогольные напитки</h2>
-                  <div>
-                    <svg
-                      width="8"
-                      height="6"
-                      viewBox="0 0 8 6"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M8 0L3.97 6L0 0H8Z" />
-                    </svg>
-                  </div>
-                </summary>
-                <ul>
-                  <li>don</li>
-                  <li>nedon</li>
-                </ul>
-              </details>
-            </div>
-          </div>
-          <div class="sample_of_product">
-            <div class="product_descr">
-              <div class="images_in_product_descr">
-                <div><img src="./img/photos/Rectangle.png" alt="" /></div>
-                <div><img src="./img/photos/Rectangle-1.png" alt="" /></div>
-                <div><img src="./img/photos/Rectangle-2.png" alt="" /></div>
-                <div><img src="./img/photos/Rectangle-3.png" alt="" /></div>
-              </div>
-              <div class="product_descr_inner">
-                <h2>Вино Пино Нуар</h2>
-                <div class="rate">
-                  <div class="stars">
-                    <div>
-                      <img src="./img/product_sample/Vector.png" alt="star" />
-                    </div>
-                    <div>
-                      <img src="./img/product_sample/Vector.png" alt="star" />
-                    </div>
-                    <div>
-                      <img src="./img/product_sample/Vector.png" alt="star" />
-                    </div>
-                    <div>
-                      <img src="./img/product_sample/Vector.png" alt="star" />
-                    </div>
-                    <div>
-                      <img src="./img/product_sample/Vector2.png" alt="star" />
-                    </div>
-                  </div>
-                  <p>Рейтинг</p>
-                  <p>4 из 5</p>
+        <div class="gray_bar" style="height: auto">
+          <ul>
+            <li>Наименование</li>
+            <li>Цена</li>
+            <li>Количество</li>
+            <li>Стоимость</li>
+          </ul>
+        </div>
+        <div
+          class="container"
+          style="display: flex; justify-content: space-between"
+        >
+          <div
+            class="container_for_product_cards basketPageD"
+            id="container_for_product_cards"
+          >
+            <div class="basketPage_product">
+              <div class="image_and_descr_of_card">
+                <div class="main_image">
+                  <img
+                    style="
+                      border-top-left-radius: 10px;
+                      border-bottom-left-radius: 10px;
+                    "
+                    src="./img/card/Rectangle.png"
+                    alt=""
+                  />
                 </div>
-                <div class="product_price">
-                  <p>руб/шт</p>
-                </div>
-                <div class="main_text_in_descr">
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing It has survived
-                    not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with when an unknown printer took a
-                    galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also the
-                    leap into electronic typesetting, remaining essentially
-                    unchanged.
-                  </p>
-                </div>
-                <p class="discount">
-                  * Бесплатная доставка при заказе от 8 000 рублей
-                </p>
-                <div class="article_and_button">
-                  <p>артикуль товара 000000</p>
-                  <button>
-                    <p>в корзину</p>
-                    <div style="height: 24px">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M18.7724 14H9.61163L9.81616 15H18.2042C18.6855 15 19.0422 15.4469 18.9356 15.9162L18.7632 16.6748C19.3473 16.9584 19.75 17.5571 19.75 18.25C19.75 19.2251 18.9525 20.0139 17.9743 19.9998C17.0423 19.9864 16.2758 19.2301 16.2507 18.2983C16.2369 17.7894 16.4408 17.3281 16.7758 17H10.2243C10.5485 17.3177 10.75 17.7602 10.75 18.25C10.75 19.2442 9.921 20.0447 8.91656 19.9981C8.02469 19.9567 7.29934 19.236 7.25247 18.3444C7.21628 17.6558 7.5786 17.0489 8.12906 16.7323L5.93384 6H3.75C3.33578 6 3 5.66422 3 5.25V4.75C3 4.33578 3.33578 4 3.75 4H6.95403C7.31031 4 7.61741 4.25066 7.68881 4.59969L7.97525 6H20.2497C20.731 6 21.0877 6.44691 20.981 6.91622L19.5038 13.4162C19.4262 13.7577 19.1226 14 18.7724 14Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="recommendations">
-              <div class="prescr_for_rec">
-                <h3>Сопутствующие предложения</h3>
-                <div>
-                  <img src="./img/icons/maki-alcohol-shop-15.png" alt="" />
-                </div>
-              </div>
-              <div class="container_for_product_cards">
-                <div class="card_ones_rec">
-                  <h2>Вино Puressio belnuoritto bancherio вторая строчка</h2>
 
-                  <div class="price_and_backet">
-                    <p class="price">руб / шт</p>
-                    <button>
-                      <p>в корзину</p>
-                      <div>
-                        <svg
-                          width="22"
-                          height="19"
-                          viewBox="0 0 22 19"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M19.2774 11.875H8.08088L8.33086 13.0625H18.5829C19.1712 13.0625 19.6072 13.5932 19.4768 14.1505L19.2661 15.0514C19.98 15.3881 20.4722 16.0991 20.4722 16.9219C20.4722 18.0798 19.4975 19.0165 18.3019 18.9998C17.1628 18.9839 16.226 18.0857 16.1952 16.9793C16.1784 16.3749 16.4277 15.8271 16.837 15.4375H8.82964C9.22598 15.8147 9.47222 16.3402 9.47222 16.9219C9.47222 18.1024 8.459 19.0531 7.23136 18.9977C6.14129 18.9485 5.25475 18.0928 5.19746 17.034C5.15323 16.2163 5.59606 15.4956 6.26886 15.1197L3.58581 2.375H0.916667C0.410399 2.375 0 1.97626 0 1.48437V0.890625C0 0.39874 0.410399 0 0.916667 0H4.83271C5.26816 0 5.6435 0.297654 5.73077 0.712129L6.08086 2.375H21.083C21.6712 2.375 22.1072 2.9057 21.9768 3.46301L20.1713 11.1818C20.0764 11.5873 19.7054 11.875 19.2774 11.875Z"
-                          />
-                        </svg>
-                      </div>
-                    </button>
-                  </div>
+                <div>
+                  <h2>2Вино Puressio belnuoritto bancherio вторая строчка</h2>
                 </div>
               </div>
+
+              <p>руб / шт</p>
+              <div class="count">
+                <button>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="8" />
+                    <rect x="8" y="11" width="8" height="2" fill="#16181B" />
+                  </svg>
+                </button>
+                <p>1 шт</p>
+                <button>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="12" cy="12" r="8" fill="#73777D" />
+                    <rect x="8" y="11" width="8" height="2" />
+                    <rect
+                      x="13"
+                      y="8"
+                      width="8"
+                      height="2"
+                      transform="rotate(90 13 8)"
+                      fill="#16181B"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="all_price">
+                <p>руб / шт</p>
+              </div>
+              <button class="delete_button">
+                <p>удалить</p>
+                <div>
+                  <img src="./img/icons/UI/ico_basket.png" alt="" />
+                </div>
+              </button>
             </div>
           </div>
-          <aside class="sidebar">
-            <div class="image_in_sidebar">
-              <img src="./img/photos/Rectangle3.png" alt="" />
-            </div>
-            <div class="main_text_in_sidebar">
-              <h3>Название события в две строки DJEDDIE</h3>
-              <div>
-                <p>24.09.2019</p>
-                <p>с 00:00 по 05:00</p>
-              </div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scram printer took a galley of type and scram
-              </p>
-            </div>
-            <button>Подробнее</button>
-          </aside>
-        </section>
+          <div class="total_score">
+            <h4>Предупреждение</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              elementum tincidunt risus, et bibendum neque sollicitudin a. Nunc
+              id lectus tincidunt, interdum mi quis, consectetur nisl. Duis ut
+              ipsum nulla. Etiam pulvinar nisi ac vestibulum tempor. Morbi
+              euismod, mauris non ultricies tincidunt. Morbi euismod, mauris non
+              ultricies tincidunt.
+            </p>
+            <p>Итого: руб</p>
+            <button>Оплатить</button>
+          </div>
+        </div>
       </main>
     </div>
     <footer>
