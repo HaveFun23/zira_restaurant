@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <!-- end css styles -->
   </head>
-  <body>
+  <body onload="createElems(),total_price_of_order_sum()">
     <div class="main" style="margin-bottom: unset">
       <header>
         <div class="header_inner">
@@ -102,7 +102,7 @@
               <div class="basket">
                 <p>Корзина</p>
                 <div><img src="./img/icons/ico_basket.svg" alt="" /></div>
-                <p>00</p>
+                <p class="main_cart">00</p>
               </div>
               <div>
                 <button class="sales">
@@ -136,10 +136,11 @@
             class="container_for_product_cards basketPageD"
             id="container_for_product_cards"
           >
-            <div class="basketPage_product">
+            <!--  <div class="basketPage_product">
               <div class="image_and_descr_of_card">
                 <div class="main_image">
                   <img
+                    class="don"
                     style="
                       border-top-left-radius: 10px;
                       border-bottom-left-radius: 10px;
@@ -156,7 +157,7 @@
 
               <p>руб / шт</p>
               <div class="count">
-                <button>
+                <button onclick="changeCount('minus')">
                   <svg
                     width="24"
                     height="24"
@@ -168,8 +169,9 @@
                     <rect x="8" y="11" width="8" height="2" fill="#16181B" />
                   </svg>
                 </button>
-                <p>1 шт</p>
-                <button>
+                <p class="counter">1</p>
+                <p>шт</p>
+                <button onclick="changeCount('plus')">
                   <svg
                     width="24"
                     height="24"
@@ -199,7 +201,7 @@
                   <img src="./img/icons/UI/ico_basket.png" alt="" />
                 </div>
               </button>
-            </div>
+            </div> -->
           </div>
           <div class="total_score">
             <h4>Предупреждение</h4>
@@ -211,7 +213,7 @@
               euismod, mauris non ultricies tincidunt. Morbi euismod, mauris non
               ultricies tincidunt.
             </p>
-            <p>Итого: руб</p>
+            <div class="total_price_of_order">Итого: руб</div>
             <button>Оплатить</button>
           </div>
         </div>
@@ -227,7 +229,6 @@
         <a>связаться с нами</a>
       </div>
     </footer>
-    <script src="./js/main.js"></script>
-    <script src="./js/for_card.js"></script>
+    <script src="./js/basket.js"></script>
   </body>
 </html>

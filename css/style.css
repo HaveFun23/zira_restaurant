@@ -1186,6 +1186,10 @@ footer {
      -moz-column-gap: 100px;
           column-gap: 100px;
   color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .basketPage_product h2,
 .basketPage_product p {
@@ -1193,6 +1197,10 @@ footer {
 }
 .basketPage_product h2 {
   max-width: 215px;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 
 .delete_button {
@@ -1252,6 +1260,10 @@ footer {
   display: flex;
   margin-left: 11%;
   padding: 11px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .gray_bar ul li:nth-child(1) {
   margin-right: 13%;
@@ -1273,7 +1285,7 @@ footer {
   color: white;
   margin-bottom: 16px;
 }
-.total_score p:nth-child(3) {
+.total_score div {
   margin-top: 30px;
   margin-bottom: 30px;
 }

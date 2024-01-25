@@ -873,12 +873,14 @@ footer {
   align-items: center;
   column-gap: 100px;
   color: white;
+  user-select: none;
   h2,
   p {
     line-height: unset;
   }
   h2 {
     max-width: 215px;
+    user-select: text;
   }
 }
 .delete_button {
@@ -920,6 +922,7 @@ footer {
     display: flex;
     margin-left: 11%;
     padding: 11px 0;
+    user-select: none;
     li:nth-child(1) {
       margin-right: 13%;
     }
@@ -941,7 +944,7 @@ footer {
     color: white;
     margin-bottom: 16px;
   }
-  p:nth-child(3) {
+  div {
     margin-top: 30px;
     margin-bottom: 30px;
   }

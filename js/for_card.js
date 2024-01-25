@@ -1,3 +1,45 @@
+const count_in_basket = document.querySelector("#count_in_basket");
+var products_in_basket = [];
+var id_for_product_in_basket = 0;
+count_in_basket.innerText = 0;
+var strung = "price: 20";
+var arr = strung.split(": ");
+window.addEventListener("click", function (event) {
+  if (event.target.hasAttribute("data-cart")) {
+    const card = event.target.closest(".card_ones");
+    count_in_basket.innerText = ++count_in_basket.innerHTML;
+    var image_in_card = card.querySelector(".main_image_include").src;
+    var price = card.querySelector(".num_of_price").innerText;
+    var descr = card.querySelector(".prescr_for_card").innerText;
+    console.log(descr, image_in_card, price);
+    createObj(descr, image_in_card, price);
+    console.log(products_in_basket[id_for_product_in_basket]);
+    id_for_product_in_basket++;
+    console.log(arr[0]);
+    localStorage.setItem("cart", count_in_basket.innerText);
+  }
+});
+/* шаблон объекта, содержащего данные карточки товара */
+
+function createObj(descr, src, price) {
+  /* function newObj(descr, src, price) {
+    this.descr = descr;
+    this.src = src;
+    this.price = price;
+  } */
+  var objSample = [descr, src, price];
+
+  localStorage.setItem(
+    id_for_product_in_basket,
+    descr + "+" + src + "+" + price
+  );
+
+  console.log(objSample);
+  products_in_basket[id_for_product_in_basket] = objSample;
+}
+
+/*//шаблон объекта, содержащего данные карточки товара */
+
 const array_of_products = document.getElementsByClassName("card_ones");
 const container_for_product = document.getElementById("container_for_product");
 const container_for_product_cards = document.getElementById(
@@ -59,3 +101,5 @@ const summary_inner_text2 = document.getElementById("summary_inner_text2");
 function changeInnerText2(e) {
   summary_inner_text2.innerText = e.innerText;
 }
+
+//для добавления в корзину
